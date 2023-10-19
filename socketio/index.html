@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket IO</title>
+  </head>
+  <body>
+    <h1>Welcome To Chat Application</h1>
+
+    <input type="text" id="textinput"/>
+    <button onclick="Sendmessage()">send text</button>
+
+    <div id="msgdiv">
+      <h2>message:</h2>
+      <h1 id="usercount"></h1>
+    </div>
+  </body>
+  <script
+    src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+    integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    const socket = io();
+
+    const mesgdiv=document.getElementById("msgdiv")
+    const Sendmessage = () => {
+      var inputValue = document.getElementById("textinput").value;
+      socket.emit("message", inputValue);    
+    };
+
+    socket.on("sent", (msg) => {
+        console.log(`Message Recived ${msg}`);
+        const p=document.createElement("p")
+        p.innerText=msg;
+        mesgdiv.append(p)
+
+    });
+
+    socket.on("users",(value)=>{
+      document.getElementById('usercount').innerHTML = "Online User's :  "+value;
+    })
+
+    socket.on("msg",(messages)=>{
+      console.log(messages)
+      messages.forEach((element) =>{
+        const li=document.createElement("li");
+        li.innerText=element;
+        mesgdiv.appendChild(li)
+
+      })
+    })
+  
+  </script>
+</html>
