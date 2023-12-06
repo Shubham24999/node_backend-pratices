@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
-
-const sequelize=new Sequelize("Vibhoredata","postgres","root",{
+   
+const sequelize=new Sequelize("your database name","postgres","your db password",{
     host: 'localhost',
     dialect:'postgres'
   });
