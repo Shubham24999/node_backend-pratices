@@ -3,8 +3,8 @@ const {Client} =require("pg");
 const client=new Client({
     user:"postgres",
     host:"localhost",
-    database:"Vibhoredata",
-    password:"root",
+    database:"your db name",
+    password:"db password",
     port:5432
 });
 
