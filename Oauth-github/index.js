@@ -4,8 +4,8 @@ const express=require("express")
 
 const app=express()
 
-const client_Secret ="d0e641a5b07fcb7e3c8aecf40db880c88ad8bbcf"
-const client_ID="bf37bb27d8d7784701bc"
+const client_Secret ="your client secret value"
+const client_ID="your client_id"
 
 
 app.get("/",(req,res)=>{
