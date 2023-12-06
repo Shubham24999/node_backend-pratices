@@ -4,8 +4,8 @@ const client = new Client({
     host: "localhost",
     user: "postgres",
     port: 5432,
-    password: "root",
-    database: "Vibhoredata"
+    password: "your mongo db password",
+    database: "your database name"
 })
 
 module.exports = client
