@@ -4,8 +4,8 @@ const client = new Client({
     host: "localhost",
     user: "postgres",
     port: 5432,
-    password: "your mongo db password",
-    database: "your database name"
+    password: "your PostgreSQL db password",
+    database: "your database name in PostgreSQL"
 })
 
 module.exports = client
