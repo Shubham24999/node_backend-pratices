@@ -2,4 +2,4 @@
 
 #In this folder I have done small projects- 
 
-![Project Details](https://www.imghippo.com/i/cMib2143LAo.png)
+![Project Details](https://i.imghippo.com/files/cMib2143LAo.png)
