@@ -2,4 +2,4 @@
 
 #In this folder I have done small projects- 
 
-![Project Details](https://drive.google.com/file/d/1KLQRP1B8Dv9DTItbSFEeCRo1kJlVsw7W/view?usp=sharing)
+![Project Details](https://www.imghippo.com/i/cMib2143LAo.png)
